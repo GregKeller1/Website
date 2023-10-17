@@ -36,12 +36,82 @@
                     <img src="Images/Greg_Keller_Headshot.jpg">
                 </div>
                 <div class="about-col-2">
-                    <h1> About Me</h1>
+                    <h1 class="subtitle"> About Me</h1>
+                    <p>As a senior in Computer Science, I am enthusiastic about securing a full-time position in the
+                        dynamic fields of Software Engineering, App Development, or Cybersecurity. Armed with a strong
+                        foundation in computer science principles and a passion for innovation, I am eager to contribute
+                        my technical expertise to real-world projects. My academic journey has honed my problem-solving
+                        abilities, allowing me to tackle complex challenges with creativity and precision. I thrive in
+                        collaborative environments, valuing teamwork and open communication as essential elements in
+                        achieving successful outcomes. With a keen eye for detail and a determination to excel, I am
+                        prepared to embark on a fulfilling career where I can leverage my skills to create impactful
+                        solutions. I am eager to apply my knowledge and dedication in a professional setting,
+                        contributing to innovative projects and pushing the boundaries of what technology can achieve.
+                    </p>
+
+                    <div class="tabtitles">
+                        <p class="tablinks activelink" onclick="opentab('skills')">Skills</p>
+                        <p class="tablinks" onclick="opentab('experience')">Experience</p>
+                        <p class="tablinks" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tabcontents activetab" id="skills">
+                        <ul>
+                            <li><span>Langauges</span><br>C/C++, Java, Python </li>
+                            <li><span>Software Development</span><br>Object Oriented Programming</li>
+                            <li><span>Data Structures & Algorithms</span><br>Hashmap, Heaps, Trees</li>
+                        </ul>
+                    </div>
+                    <div class="tabcontents" id="experience">
+                        <ul>
+                            <li><span>Senior Capstone</span><br>Unity 3D game with a networking multiplayer aspect
+                                <br> players to make for a competitive and fun gaming experience
+                            </li>
+                            <li><span>Software Engineering</span><br>Ride Sharing app using Apple Maps API, a javascript
+                                web app for riders,<br> and a database to store information about the locations of the
+                                event, riders,<br> and real time location of drivers</li>
+                            <li><span>Citibank Financial Analyst</span><br>Spent the summer in the operations department
+                                of Citibank in Tampa, FL where I was able to work within an international team of 50+
+                                members, improved effiency of multiple processes, and learned how to bridge the gap
+                                between Technology and Operations divisions</li>
+                        </ul>
+                    </div>
+                    <div class="tabcontents" id="education">
+                        <ul>
+                            <li><span>Purdue University</span><br>Computer Science Major with a minor in Business
+                                Economics</li>
+                            <li><span>ECD</span><br>May of 2024</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">My Portfolio</h1>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tablinks")
+        var tabcontents = document.getElementsByClassName("tabcontents")
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("activelink");
+            }
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("activetab");
+            }
+
+            event.currentTarget.classList.add("activelink");
+            document.getElementById(tabname).classList.add("activetab");
+
+        }
+
+
+    </script>
 </body>
 
 </html>
