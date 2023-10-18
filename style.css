@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: #080808;
     color: #ffffff;
@@ -143,7 +147,7 @@ nav ul li a:hover::after {
 }
 
 .tablinks.activelink::after {
-    width: 50%;
+    width: 100%;
 }
 
 .tabcontents ul li {
@@ -166,4 +170,139 @@ nav ul li a:hover::after {
 
 #portfolio {
     padding: 50px 0;
+}
+
+.worklist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), #3700ce);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #3700ce;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background-color: #3700ce;
+}
+
+.contactleft {
+    flex-basis: 35%;
+}
+
+.contactright {
+    flex-basis: 60%;
+}
+
+.contactleft p {
+    margin-top: 30px;
+}
+
+.contactleft p i {
+    color: #3700ce;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.socials {
+    margin-top: 30px;
+}
+
+.socials a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ffffff;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.socials a:hover {
+    color: #3700ce;
+    transform: translateY(-5px);
+}
+
+.btn.btn2 {
+    display: inline-block;
+    background: #3700ce;
+}
+
+.contactright form {
+    width: 100%;
+
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
 }
